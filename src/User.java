@@ -17,24 +17,8 @@ public class User {
 public void addUser(){
      Scanner sc = new Scanner(System.in);
 
-     Validation obj = new Validation(email,password);
-     boolean emailValid = obj.isValidEmailAddress();
-     boolean passwordValid = obj.isValidPassword();
-     if(emailValid && passwordValid){
-        userCredentials.put(email,password);
-     }
-      if(emailValid == false){
-         System.out.println("Invalid Email");
-         System.out.println("Enter new Email");
 
-         setEmail(sc.nextLine());
-     }
-     if(passwordValid == false){
-         System.out.println("Invalid password length should be more than 5");
-         System.out.println("Enter new password");
-         changePassword(sc.nextLine());
 
-     }
 
 
 }
