@@ -9,18 +9,21 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String email = "";
         String password ="";
-        while(1){
+        User user;
+        while(true){
             System.out.println("Enter email");
             email = sc.nextLine();
             System.out.println("Enter password");
             password = sc.nextLine();
+
+
             Validation obj = new Validation(email,password);
             boolean emailValid = obj.isValidEmailAddress();
             boolean passwordValid = obj.isValidPassword();
+
             if(emailValid && passwordValid){
                 System.out.println("User registered");
-                User user = new User(email,password);
-
+                 user = new User(email,password);
                 break;
             }
             else{
@@ -29,7 +32,6 @@ public class Main {
 
         }
 
-        User user = new User(email,password);
 
 
         System.out.println("printing all users");

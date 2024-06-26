@@ -8,6 +8,7 @@ public class User {
  String email;
  String password;
  Map<String,String> userCredentials= new HashMap<>();
+
  User(String email,String password){
      this.email = email;
 
@@ -16,6 +17,8 @@ public class User {
  }
 public void addUser(){
      Scanner sc = new Scanner(System.in);
+
+     userCredentials.put(email,password);
 
 
 
