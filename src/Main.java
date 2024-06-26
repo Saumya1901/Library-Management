@@ -4,37 +4,30 @@
 
 import  java.util.*;
 public class Main {
+
     public static void main(String[] args) {
 
+
         Scanner sc = new Scanner(System.in);
-        String email = "";
-        String password ="";
-        User user;
-        while(true){
-            System.out.println("Enter email");
-            email = sc.nextLine();
-            System.out.println("Enter password");
-            password = sc.nextLine();
+        int role;
+        System.out.println("Enter 1 if user is a admin " +
+                "Enter 2 if user is a library member");
+        role = sc.nextInt();
+        InputDetail d = new InputDetail(role);
 
-
-            Validation obj = new Validation(email,password);
-            boolean emailValid = obj.isValidEmailAddress();
-            boolean passwordValid = obj.isValidPassword();
-
-            if(emailValid && passwordValid){
-                System.out.println("User registered");
-                 user = new User(email,password);
-                break;
-            }
-            else{
-                System.out.println("Details are invalid");
-            }
-
+        if(role == 1){
+            Admin admin = InputDetail.createAdmin();
+            admin.printAllAdmins();
+        }
+        else{
+            User user  = InputDetail.createUser();
+            user.printAllUsers();
         }
 
 
 
-        System.out.println("printing all users");
-        user.printAllUsers();
+
+
+
     }
 }

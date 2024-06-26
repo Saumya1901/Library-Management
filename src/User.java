@@ -7,33 +7,17 @@ public class User {
 
  String email;
  String password;
- Map<String,String> userCredentials= new HashMap<>();
+ static Map<String,String> userCredentials= new HashMap<>();
 
  User(String email,String password){
      this.email = email;
 
      this.password = password;
-     addUser();
- }
-public void addUser(){
-     Scanner sc = new Scanner(System.in);
-
      userCredentials.put(email,password);
-
-
-
-
-
-}
-public void setEmail(String email){
-     this.email = email;
-     addUser();
-}
- public void changePassword(String password){
-     this.password = password;
-     addUser();
  }
+
 public void printAllUsers(){
+     System.out.println("Printing Users");
      for(Map.Entry<String,String> entry : userCredentials.entrySet()){
          String userEmail = entry.getKey();
          String userPassword = entry.getValue();
