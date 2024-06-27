@@ -1,0 +1,18 @@
+Library Management System: Manage a library's books, borrowers, and transactions. Utilize classes for Book, Borrower, and Transaction, applying encapsulation to restrict direct data access. Implement inheritance for different book categories (e.g., Fiction, NonFiction).
+
+
+
+Classes : Book , Borrower and Transaction
+
+Book:
+title ISBN genre , publication year , availability
+
+Borrower :
+id , name , contact information
+
+
+transaction :
+borrowed date , due date, return date
+
+Librarry
+For managemet
