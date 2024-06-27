@@ -1,41 +1,28 @@
 public class Book {
-    String title , author , publisher,genre;
-    Book(String title, String author, String publisher,String genre){
+    private  String title , author , publisher,genre,isbn;
+    private  int capacity , publicationYear ;
+    private  boolean availability ;
+
+    Book(String title, String author,String isbn, String publisher,String genre,int publicationYear,int capacity ){
         this.title = title;
         this.author = author;
         this.publisher = publisher;
         this.genre = genre;
+        this.isbn = isbn;
+        this.publicationYear = publicationYear;
+        this.capacity = capacity;
+        availability = true;
     }
 
-    public String getTitle() {
-        return title;
+    public boolean getAvailability(){
+        return availability;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void updateCapacityIssued(){
+        capacity-=1;
+    }
+    public void updateCapacityReturned(){
+        capacity+=1;
     }
 
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    public String getPublisher() {
-        return publisher;
-    }
-
-    public void setPublisher(String publisher) {
-        this.publisher = publisher;
-    }
-
-    public String getGenre() {
-        return genre;
-    }
-
-    public void setGenre(String genre) {
-        this.genre = genre;
-    }
 }

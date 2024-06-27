@@ -35,9 +35,9 @@ public class InputDetail {
     }
 
 
-    public static User createUser(){
+    public static Borrower createUser(){
         System.out.println("Registering User");
-        return new User(email, password);
+        return new Borrower(email, password);
     }
     public static Admin createAdmin(){
         System.out.println("Registering Admin");

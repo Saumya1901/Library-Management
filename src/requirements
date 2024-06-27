@@ -13,6 +13,11 @@ id , name , contact information
 
 transaction :
 borrowed date , due date, return date
+TransactionId : keep a log of every transactions even the failed ones
 
-Librarry
-For managemet
+
+Admin : the person who adds the books to the library
+
+Library :
+adding book , deleting book,searchbook , issueBook  , list all available books, return book
+For management

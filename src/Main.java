@@ -20,8 +20,8 @@ public class Main {
             admin.printAllAdmins();
         }
         else{
-            User user  = InputDetail.createUser();
-            user.printAllUsers();
+            Borrower borrower = InputDetail.createUser();
+            borrower.printAllUsers();
         }
 
 
