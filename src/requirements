@@ -16,6 +16,13 @@ borrowed date , due date, return date
 TransactionId : keep a log of every transactions even the failed ones
 
 
+Inventory
+update counter of books of the lib
+get availablity
+prit all books available
+
+
+
 Admin : the person who adds the books to the library
 
 Library :

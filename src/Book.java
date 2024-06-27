@@ -1,7 +1,7 @@
 public class Book {
     private  String title , author , publisher,genre,isbn;
     private  int capacity , publicationYear ;
-    private  boolean availability ;
+
 
     Book(String title, String author,String isbn, String publisher,String genre,int publicationYear,int capacity ){
         this.title = title;
@@ -11,18 +11,30 @@ public class Book {
         this.isbn = isbn;
         this.publicationYear = publicationYear;
         this.capacity = capacity;
-        availability = true;
+
     }
 
-    public boolean getAvailability(){
-        return availability;
+
+    public String getTitle(){
+        return title;
+    }
+    public void updateCapacity(int addedCapacity){
+        capacity+=addedCapacity;
     }
 
-    public void updateCapacityIssued(){
-        capacity-=1;
-    }
-    public void updateCapacityReturned(){
-        capacity+=1;
+    public String getPublisher() {
+        return publisher;
     }
 
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public Integer getCapacity() {
+        return capacity;
+    }
 }

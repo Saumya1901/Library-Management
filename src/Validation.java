@@ -1,5 +1,6 @@
 import java.util.regex.*;
 import java.util.*;
+import java.util.UUID;
 
 public class Validation {
 
@@ -16,11 +17,26 @@ public class Validation {
                 .matcher(email)
                 .matches();
     }
+
     public boolean isValidPassword(){
         int len = password.length();
         if(len < 5){
             return false;
         }
         return true;
+    }
+
+    /**
+     *
+     * @return uniquely generate id for idetificaton
+     */
+    public static  String generateId(){
+
+        UUID uuid = UUID.randomUUID();
+
+        String uuidAsString = uuid.toString();
+
+        return uuidAsString;
+
     }
 }
